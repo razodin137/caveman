@@ -1,0 +1,137 @@
+/* Hallmark · route: custom (bespoke) · structure: cave-poster masthead → manifesto band → rock counter → meat list → elder quote → ask-elder → grunt form
+ * theme: custom · vibe: "cave wall, ochre handprint, no polish" · paper: oklch(91.5% 0.022 82) · accent: oklch(47% 0.155 38)
+ * display: Rubik Mono One · body: Space Mono · axes: light / display-heavy / chromatic-terracotta
+ * studied: no · context: inferred · contrast: pass (40–41) · nav: custom masthead · footer: custom band
+ * slop: pass (42–45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49) · mobile: pass (34, 49, 50–57)
+ * Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5
+ */
+
+@font-face {
+  font-family: "Rubik Mono One";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/rubik-mono-one-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/space-mono-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/space-mono-700.woff2") format("woff2");
+}
+
+:root {
+  color-scheme: light;
+
+  /* Type */
+  --font-display: "Rubik Mono One", "Arial Black", Impact, sans-serif;
+  --font-body: "Space Mono", "Courier New", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.953rem;
+  --text-2xl: 2.441rem;
+  --text-3xl: 3.052rem;
+  --text-display: clamp(2.5rem, 8.2vw, 6.5rem);
+  --text-section: clamp(2.25rem, 5.6vw, 4.5rem);
+  --text-mega: clamp(4rem, 11vw, 9rem);
+  --text-footer: clamp(3rem, 16.5vw, 15rem);
+
+  --lh-tight: 1.04;
+  --lh-body: 1.6;
+
+  /* Space: 4pt scale */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+  --space-5xl: 10rem;
+
+  /* Page palette */
+  --color-paper: oklch(91.5% 0.022 82);
+  --color-paper-2: oklch(88% 0.026 82);
+  --color-paper-3: oklch(84.5% 0.03 80);
+  --color-ink: oklch(20% 0.014 55);
+  --color-ink-2: oklch(36% 0.016 55);
+  --color-muted: oklch(44% 0.014 55);
+  --color-rule: oklch(72% 0.022 75);
+  --color-rule-2: oklch(81% 0.024 78);
+  --color-accent: oklch(47% 0.155 38);
+  --color-accent-ink: oklch(91.5% 0.022 82);
+  --color-focus: oklch(47% 0.2 38);
+  --color-error: oklch(45% 0.17 27);
+  --color-success: oklch(42% 0.11 150);
+  --color-grain: oklch(20% 0.014 55 / 0.055);
+  --color-ochre: oklch(66% 0.13 78);
+
+  /* Cave art stays firelit in both modes */
+  --color-cave: oklch(66% 0.13 78);
+  --color-cave-ink: oklch(20% 0.014 55);
+  --color-cave-accent: oklch(47% 0.155 38);
+
+  /* Inverted bands flip against the page in each mode */
+  --color-band: oklch(20% 0.014 55);
+  --color-band-ink: oklch(91.5% 0.022 82);
+  --color-band-muted: oklch(74% 0.018 75);
+  --color-band-accent: oklch(66% 0.13 78);
+  --color-band-focus: oklch(78% 0.15 78);
+
+  /* Form and chrome */
+  --rule-thin: 2px;
+  --rule: 3px;
+  --rule-heavy: 6px;
+  --radius: 0;
+  --shadow-hard: 8px 8px 0 var(--color-ink);
+  --shadow-art: 10px 10px 0 var(--color-ink);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 120ms;
+  --dur-mid: 240ms;
+
+  --page-max: 96rem;
+  --page-pad: clamp(1rem, 4vw, 3rem);
+}
+
+[data-fire="night"] {
+  color-scheme: dark;
+
+  --color-paper: oklch(17% 0.014 55);
+  --color-paper-2: oklch(21% 0.016 55);
+  --color-paper-3: oklch(26% 0.018 55);
+  --color-ink: oklch(91% 0.018 82);
+  --color-ink-2: oklch(78% 0.018 80);
+  --color-muted: oklch(70% 0.02 80);
+  --color-rule: oklch(33% 0.02 55);
+  --color-rule-2: oklch(27% 0.018 55);
+  --color-accent: oklch(64% 0.17 45);
+  --color-accent-ink: oklch(16% 0.014 55);
+  --color-focus: oklch(74% 0.19 70);
+  --color-error: oklch(75% 0.15 25);
+  --color-success: oklch(76% 0.12 150);
+  --color-grain: oklch(91% 0.018 82 / 0.045);
+
+  --color-band: oklch(91.5% 0.022 82);
+  --color-band-ink: oklch(20% 0.014 55);
+  --color-band-muted: oklch(44% 0.014 55);
+  --color-band-accent: oklch(47% 0.155 38);
+  --color-band-focus: oklch(47% 0.2 38);
+}

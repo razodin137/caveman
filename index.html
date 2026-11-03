@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en" data-fire="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CAVE HAVE WEBSITE — UG CAVE NET</title>
+  <meta name="description" content="CAVE HAVE WEBSITE. Fast. Free. Made of rock. No cloud. No cookie. No email. Just grunt.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    try {
+      if (localStorage.getItem("cave-fire") === "night") {
+        document.documentElement.dataset.fire = "night";
+      }
+    } catch (error) {}
+  </script>
+  <link rel="preload" href="assets/fonts/rubik-mono-one-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">SKIP TO GOOD PART</a>
+
+  <div class="ticker" role="region" aria-label="Cave news">
+    <div class="ticker__viewport">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span class="ticker__item">GRUNT GRUNT GRUNT</span>
+          <span class="ticker__item">WHEEL DISCOVERED. STILL ROUND</span>
+          <span class="ticker__item">NO CLOUD. CLOUD IS SKY WATER</span>
+          <span class="ticker__item">NEW: MEAT SECTION HAVE MEAT</span>
+          <span class="ticker__item">SITE UPDATED LAST MOON</span>
+          <span class="ticker__item">FIRE GOOD</span>
+        </div>
+        <div class="ticker__group" aria-hidden="true">
+          <span class="ticker__item">GRUNT GRUNT GRUNT</span>
+          <span class="ticker__item">WHEEL DISCOVERED. STILL ROUND</span>
+          <span class="ticker__item">NO CLOUD. CLOUD IS SKY WATER</span>
+          <span class="ticker__item">NEW: MEAT SECTION HAVE MEAT</span>
+          <span class="ticker__item">SITE UPDATED LAST MOON</span>
+          <span class="ticker__item">FIRE GOOD</span>
+        </div>
+      </div>
+    </div>
+    <button class="ticker__pause" type="button" data-ticker-pause aria-pressed="false" aria-label="Pause cave news">STOP</button>
+  </div>
+
+  <header class="masthead">
+    <a class="masthead__brand" href="#top" aria-label="UG Cave Net, back to top">
+      <span class="logo">UG<span>.</span></span>
+      <span class="masthead__tag"><span>Cave Net</span><span>Est. 40,000 BC</span></span>
+    </a>
+    <button class="fire" type="button" data-fire-toggle aria-pressed="false" aria-label="Turn the cave dark">SUN DOWN</button>
+    <nav class="masthead__nav" aria-label="Cave sections">
+      <a href="#why">WHY</a>
+      <a href="#rock">ROCK</a>
+      <a href="#meat">MEAT</a>
+      <a href="#ask">ASK</a>
+      <a href="#grunt">GRUNT</a>
+      <a href="login.html">DOOR</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line">CAVE HAVE</span>
+          <span class="hero__line hero__site">WEBSITE.</span>
+        </h1>
+        <p class="hero__lede">We make fire. We make tool. Now we make site. It load fast. It not track you. It not ask for email.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#why">GO IN CAVE <span aria-hidden="true">↓</span></a>
+          <a class="link" href="#meat">SEE MEAT <span aria-hidden="true">→</span></a>
+        </div>
+        <ul class="hero__facts">
+          <li>NO COOKIE</li>
+          <li>NO CLOUD</li>
+          <li>NO EMAIL</li>
+        </ul>
+      </div>
+
+      <figure class="hero__art">
+        <svg viewBox="0 0 600 540" role="img" aria-labelledby="cave-art-title cave-art-desc">
+          <title id="cave-art-title">A cave painting of a bison, hunters, handprints, and a sun</title>
+          <desc id="cave-art-desc">Ochre and charcoal wall painting: a large bison in the centre, four red hand stencils, three tiny hunters with spears, a rayed sun, and tally marks.</desc>
+          <defs>
+            <filter id="cave-wobble" x="-10%" y="-10%" width="120%" height="120%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.01 0.018" numOctaves="2" seed="11" result="noise"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+            <g id="cave-hand">
+              <path d="M-20 20 C-26 10 -26 0 -21 -7 C-16 -14 -11 -8 -9 0 L-9 12 Z"/>
+              <rect x="-18" y="-46" width="8" height="42" rx="4" transform="rotate(-8 -14 -25)"/>
+              <rect x="-8" y="-54" width="8" height="50" rx="4" transform="rotate(-2 -4 -29)"/>
+              <rect x="2" y="-50" width="8" height="46" rx="4" transform="rotate(5 6 -27)"/>
+              <rect x="12" y="-40" width="7" height="36" rx="3.5" transform="rotate(12 15 -22)"/>
+              <rect x="-31" y="-8" width="8" height="30" rx="4" transform="rotate(-48 -27 7)"/>
+            </g>
+            <g id="cave-hunter">
+              <circle cx="0" cy="-30" r="6" fill="var(--color-cave-ink)" stroke="none"/>
+              <g fill="none" stroke="var(--color-cave-ink)" stroke-width="3.5" stroke-linecap="round">
+                <path d="M0 -24 L0 -2 M0 -15 L-9 -22 M0 -15 L9 -22 M0 -2 L-7 16 M0 -2 L8 16"/>
+                <path d="M12 -37 L-2 20"/>
+              </g>
+            </g>
+          </defs>
+
+          <rect width="600" height="540" fill="var(--color-cave)"/>
+
+          <g fill="none" stroke="var(--color-cave-ink)" stroke-opacity=".12" stroke-width="2">
+            <path d="M0 470 C70 455 120 465 190 450 S330 465 430 450 S540 460 600 445"/>
+            <path d="M40 0 C55 60 42 110 58 160"/>
+            <path d="M560 280 C535 320 548 370 525 420"/>
+          </g>
+          <g fill="var(--color-cave-ink)" opacity=".1">
+            <circle cx="60" cy="60" r="2"/>
+            <circle cx="210" cy="52" r="1.5"/>
+            <circle cx="330" cy="90" r="2.5"/>
+            <circle cx="570" cy="170" r="2"/>
+            <circle cx="520" cy="40" r="1.5"/>
+            <circle cx="30" cy="510" r="2"/>
+            <circle cx="240" cy="500" r="1.5"/>
+            <circle cx="380" cy="480" r="2"/>
+            <circle cx="330" cy="410" r="1.5"/>
+            <circle cx="470" cy="520" r="2.5"/>
+          </g>
+
+          <g filter="url(#cave-wobble)">
+            <g transform="translate(486 96)" stroke="var(--color-cave-accent)" fill="none" stroke-width="5" stroke-linecap="round">
+              <circle r="23" fill="var(--color-cave-accent)" stroke="none"/>
+              <g>
+                <line y1="-34" y2="-52"/>
+                <line y1="-34" y2="-52" transform="rotate(45)"/>
+                <line y1="-34" y2="-52" transform="rotate(90)"/>
+                <line y1="-34" y2="-52" transform="rotate(135)"/>
+                <line y1="-34" y2="-52" transform="rotate(180)"/>
+                <line y1="-34" y2="-52" transform="rotate(225)"/>
+                <line y1="-34" y2="-52" transform="rotate(270)"/>
+                <line y1="-34" y2="-52" transform="rotate(315)"/>
+              </g>
+            </g>
+
+            <g fill="var(--color-cave-accent)">
+              <g transform="translate(78 126) rotate(-18) scale(1.2)"><use href="#cave-hand"/></g>
+              <g transform="translate(150 218) rotate(11) scale(0.85)"><use href="#cave-hand"/></g>
+              <g transform="translate(80 356) rotate(24) scale(0.95)"><use href="#cave-hand"/></g>
+              <g transform="translate(510 392) rotate(-22) scale(1.05)"><use href="#cave-hand"/></g>
+            </g>
+
+            <g stroke="var(--color-cave-ink)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <path d="M205 300 L198 384 L210 398"/>
+              <path d="M238 309 L233 394 L246 405"/>
+              <path d="M368 312 L360 398 L373 410"/>
+              <path d="M404 306 L410 396 L423 405"/>
+            </g>
+
+            <path d="M104 250 C96 240 98 226 112 220 C122 216 132 214 142 206 C150 180 166 156 194 142 C218 128 244 122 268 128 C292 132 310 142 322 154 C330 160 342 164 352 166 C388 162 432 178 450 206 C462 218 470 236 468 254 C466 280 458 298 446 312 L432 312 L430 282 C400 296 360 302 322 300 L312 330 L296 328 L300 296 C258 292 216 280 188 260 C174 270 156 274 144 268 L128 278 C114 274 106 264 104 250 Z" fill="var(--color-cave-accent)" stroke="var(--color-cave-ink)" stroke-width="8"/>
+
+            <g fill="none" stroke="var(--color-cave-ink)" stroke-width="3" opacity=".3" stroke-linecap="round">
+              <path d="M198 260 C210 240 216 220 218 198"/>
+              <path d="M226 267 C238 245 245 224 246 200"/>
+              <path d="M256 273 C270 250 278 226 278 200"/>
+              <path d="M288 279 C303 256 312 232 312 204"/>
+              <path d="M320 283 C336 260 345 236 344 210"/>
+              <path d="M352 286 C368 265 376 242 376 216"/>
+              <path d="M384 287 C398 268 406 246 407 222"/>
+            </g>
+
+            <g stroke="var(--color-cave-ink)" stroke-width="6" stroke-linecap="round" fill="none">
+              <path d="M122 220 C110 203 96 201 86 210 C100 208 112 214 120 224"/>
+              <path d="M138 212 C130 197 118 189 106 190 C116 196 122 204 126 214"/>
+              <path d="M101 246 C94 252 94 260 100 264"/>
+              <path d="M108 258 C112 274 120 284 130 284"/>
+            </g>
+            <circle cx="118" cy="238" r="4.5" fill="var(--color-cave-ink)"/>
+            <path d="M468 242 C492 250 500 270 486 288" stroke="var(--color-cave-ink)" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+            <g transform="translate(78 460) rotate(-6) scale(0.95)"><use href="#cave-hunter"/></g>
+            <g transform="translate(128 478) rotate(4) scale(0.8)"><use href="#cave-hunter"/></g>
+            <g transform="translate(178 462) rotate(-3) scale(1.05)"><use href="#cave-hunter"/></g>
+
+            <g stroke="var(--color-cave-ink)" stroke-width="4" stroke-linecap="round" opacity=".7">
+              <path d="M470 458 L470 490"/>
+              <path d="M482 458 L482 490"/>
+              <path d="M494 458 L494 490"/>
+              <path d="M506 458 L506 490"/>
+              <path d="M462 488 L514 454"/>
+            </g>
+          </g>
+        </svg>
+        <figcaption>
+          <span>FIG. 1 — FIRST WEBSITE. PAINTED FROM MEMORY.</span>
+          <span>C. 40,000 BC</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="manifesto" aria-labelledby="manifesto-title">
+      <div class="manifesto__inner">
+        <h2 class="manifesto__statement" id="manifesto-title">WE NOT NEED 40 MEGABYTE. WE NEED STICK. <span class="manifesto__accent">ROCK.</span> WORD.</h2>
+        <p class="manifesto__meta">
+          <span>CARVED IN ONE SITTING. NO DRAFT.</span>
+          <span>— THE CAVE MANIFESTO</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="section__inner">
+        <header class="section__head">
+          <h2 id="why-title">WHY CAVE SITE</h2>
+          <p>Most site heavy. Heavy site slow. Slow site make caveman angry. This site flat. Flat site fast.</p>
+        </header>
+        <ol class="principles">
+          <li class="principle">
+            <span class="principle__num" aria-hidden="true">01</span>
+            <h3>THING WORK.</h3>
+            <p>No 40 megabyte. No pop-up. You click, thing happen. Done. That whole trick.</p>
+          </li>
+          <li class="principle">
+            <span class="principle__num" aria-hidden="true">02</span>
+            <h3>THING FAST.</h3>
+            <p>No cloud between you and word. Word here. Rock here. Site already here when you arrive.</p>
+          </li>
+          <li class="principle">
+            <span class="principle__num" aria-hidden="true">03</span>
+            <h3>THING QUIET.</h3>
+            <p>No cookie. No email. No “accept all.” We not know what cookie is. We eat cookie.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section rock" id="rock" aria-labelledby="rock-title">
+      <div class="section__inner">
+        <div class="rock__machine">
+          <div class="rock__intro">
+            <h2 id="rock-title">ROCK.</h2>
+            <p>Press button. Get rock. Rock is money. Rock is also rock. Very efficient.</p>
+            <div class="rock__actions">
+              <button class="btn" type="button" data-rock-add>TAKE ROCK</button>
+              <button class="btn btn--ghost" type="button" data-rock-remove disabled>PUT BACK</button>
+            </div>
+          </div>
+          <div class="rock__display">
+            <p class="rock__label">YOU HAVE</p>
+            <p class="rock__count"><span id="rock-count" aria-live="polite" aria-atomic="true">0</span><span class="rock__count-unit">ROCK</span></p>
+            <div class="rock__pile" id="rock-pile" aria-hidden="true"></div>
+            <p class="rock__note" id="rock-note">CAVE REMEMBER. (THIS BROWSER ONLY.)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="meat" aria-labelledby="meat-title">
+      <div class="section__inner">
+        <header class="section__head">
+          <h2 id="meat-title">MEAT.</h2>
+          <p>Menu. Price in rock. Rock is money. We not make change.</p>
+        </header>
+        <ul class="menu">
+          <li class="menu__item">
+            <h3>MAMMOTH STEAK</h3>
+            <p class="menu__desc">Big. Still warm. Share with clan. Or not.</p>
+            <span class="menu__price">12 ROCK</span>
+          </li>
+          <li class="menu__item">
+            <h3>BERRY</h3>
+            <p class="menu__desc">Small. Red. Not poison. Probably.</p>
+            <span class="menu__price">1 ROCK</span>
+          </li>
+          <li class="menu__item menu__item--free">
+            <h3>FIRE</h3>
+            <p class="menu__desc">We make. You take. Do not put in cave.</p>
+            <span class="menu__price">FREE</span>
+          </li>
+          <li class="menu__item">
+            <h3>WHEEL</h3>
+            <p class="menu__desc">New. Still round. Roll good.</p>
+            <span class="menu__price">4 ROCK</span>
+          </li>
+        </ul>
+        <p class="menu__note">NO CARD. NO REFUND. ROCK STAY.</p>
+      </div>
+    </section>
+
+    <section class="elder" aria-labelledby="elder-title">
+      <div class="elder__inner">
+        <figure class="pullquote">
+          <blockquote>
+            <p id="elder-title">IF SITE SLOW, THROW ROCK AT SITE.</p>
+          </blockquote>
+          <figcaption>— ELDER, KEEPER OF FLAME</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="ask" aria-labelledby="ask-title">
+      <div class="section__inner">
+        <header class="section__head">
+          <h2 id="ask-title">ASK ELDER.</h2>
+          <p>Question? We have answer. Answer maybe wrong. Still answer.</p>
+        </header>
+        <div class="faq">
+          <details>
+            <summary>WHAT IS WEBSITE?</summary>
+            <p class="faq__answer">Flat rock with word. You look. You grunt.</p>
+          </details>
+          <details>
+            <summary>CAN I EAT WEBSITE?</summary>
+            <p class="faq__answer">No. Eat meat. Section above.</p>
+          </details>
+          <details>
+            <summary>WHY ALL WORD BIG?</summary>
+            <p class="faq__answer">Because cave. Also we only have big brush.</p>
+          </details>
+          <details>
+            <summary>YOU STEAL MY ROCK?</summary>
+            <p class="faq__answer">No. We have own rock. Many rock. See rock section.</p>
+          </details>
+          <details>
+            <summary>WHO MAKE THIS?</summary>
+            <p class="faq__answer">Two caveman. One hold stick. Other hold stick. Good team.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="grunt" aria-labelledby="grunt-title">
+      <div class="section__inner">
+        <div class="contact__grid">
+          <div class="contact__intro">
+            <h2 id="grunt-title">GRUNT AT US.</h2>
+            <p>You have word? Put word here. We grunt back when sun come up.</p>
+            <p class="contact__note">THIS FORM GO NOWHERE. IT JUST GRUNT. (CAVE DEMO.)</p>
+          </div>
+          <form class="grunt-form" id="grunt-form">
+            <div class="field">
+              <label for="grunt-name">YOUR NAME (OR SOUND)</label>
+              <input id="grunt-name" name="name" type="text" autocomplete="name" required maxlength="40" placeholder="UG" aria-describedby="name-hint">
+              <p class="field__hint" id="name-hint">REQUIRED. CAVE LAW.</p>
+            </div>
+            <div class="field">
+              <label for="grunt-message">YOUR GRUNT</label>
+              <textarea id="grunt-message" name="message" rows="4" required maxlength="280" placeholder="GRUNT..." aria-describedby="message-hint"></textarea>
+              <p class="field__hint" id="message-hint">REQUIRED. KEEP SHORT. WE SLOW READER.</p>
+            </div>
+            <button class="btn" type="submit">SEND GRUNT</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__word">GRUNT.</p>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <a href="#why">WHY</a>
+        <a href="#rock">ROCK</a>
+        <a href="#meat">MEAT</a>
+        <a href="#ask">ASK</a>
+        <a href="#grunt">GRUNT</a>
+        <a href="login.html">DOOR</a>
+        <a href="#top">TOP</a>
+      </nav>
+      <div class="site-footer__meta">
+        <p>MADE BY CAVEMAN. FOR CAVEMAN. WITH FIRE, ROCK, AND STICK.</p>
+        <p>NO FRAMEWORK. NO CLOUD. NO COOKIE.</p>
+        <p>© 40,000 BC. ALL ROCK RESERVED.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

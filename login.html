@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-fire="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ENTER CAVE — UG CAVE NET</title>
+  <meta name="description" content="Cave door. Name and secret grunt. Then you inside. No account. No email. Just cave.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    try {
+      if (localStorage.getItem("cave-fire") === "night") {
+        document.documentElement.dataset.fire = "night";
+      }
+    } catch (error) {}
+  </script>
+  <link rel="preload" href="assets/fonts/rubik-mono-one-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">SKIP TO DOOR</a>
+
+  <header class="masthead">
+    <a class="masthead__brand" href="index.html" aria-label="UG Cave Net, back to cave">
+      <span class="logo">UG<span>.</span></span>
+      <span class="masthead__tag"><span>Cave Net</span><span>Est. 40,000 BC</span></span>
+    </a>
+    <button class="fire" type="button" data-fire-toggle aria-pressed="false" aria-label="Turn the cave dark">SUN DOWN</button>
+    <nav class="masthead__nav" aria-label="Cave sections">
+      <a href="index.html#why">WHY</a>
+      <a href="index.html#rock">ROCK</a>
+      <a href="index.html#meat">MEAT</a>
+      <a href="index.html#ask">ASK</a>
+      <a href="index.html#grunt">GRUNT</a>
+      <a href="login.html" aria-current="page">DOOR</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section contact" id="door" aria-labelledby="door-title">
+      <div class="section__inner">
+        <div class="contact__grid">
+          <div class="contact__intro">
+            <h2 id="door-title">DOOR.</h2>
+            <p>Cave have door. Door need name. Door need secret grunt. Say both, door open.</p>
+            <p class="contact__note">THIS DOOR NOT REAL LOCK. IT CAVE DEMO. NO ACCOUNT. NO EMAIL.</p>
+          </div>
+          <form class="grunt-form" id="door-form">
+            <div class="field">
+              <label for="door-name">YOUR NAME (OR SOUND)</label>
+              <input id="door-name" name="name" type="text" autocomplete="username" required maxlength="40" placeholder="UG" aria-describedby="door-name-hint">
+              <p class="field__hint" id="door-name-hint">REQUIRED. CAVE LAW.</p>
+            </div>
+            <div class="field">
+              <label for="door-secret">SECRET GRUNT</label>
+              <input id="door-secret" name="secret" type="password" autocomplete="current-password" required maxlength="64" placeholder="••••" aria-describedby="door-secret-hint">
+              <p class="field__hint" id="door-secret-hint">ANY GRUNT WORK. WE NOT JUDGE.</p>
+            </div>
+            <button class="btn" type="submit">OPEN DOOR</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__word">GRUNT.</p>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <a href="index.html#why">WHY</a>
+        <a href="index.html#rock">ROCK</a>
+        <a href="index.html#meat">MEAT</a>
+        <a href="index.html#ask">ASK</a>
+        <a href="index.html#grunt">GRUNT</a>
+        <a href="login.html">DOOR</a>
+        <a href="index.html">CAVE</a>
+      </nav>
+      <div class="site-footer__meta">
+        <p>MADE BY CAVEMAN. FOR CAVEMAN. WITH FIRE, ROCK, AND STICK.</p>
+        <p>NO FRAMEWORK. NO CLOUD. NO COOKIE.</p>
+        <p>© 40,000 BC. ALL ROCK RESERVED.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

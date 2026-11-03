@@ -1,0 +1,15 @@
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+.DS_Store
+dist/
+build/
+out/
+target/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
